@@ -3,15 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bootstrap</title>
+    <title>Donate Skills Foundation - Transformando Vidas</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />
+    <style>
+      .tm-social {
+        width: 50px;
+        height: 50px;
+      }
+      p {
+        text-align: justify;
+      }
+    </style>
   </head>
   <body>
+    <!--NAVBAR-->
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
       <a class="navbar-brand" href="#"><img src="./assets/img/logo1.gif" /></a>
       <button
@@ -30,11 +46,14 @@
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
             <a class="nav-link text-light" href="#"
-              >Home <span class="sr-only">(página atual)</span></a
+              ><i class="fas fa-home"></i> Home
+              <span class="sr-only">(página atual)</span></a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light" href="#">Link</a>
+            <a class="nav-link text-light" href="#"
+              ><i class="fas fa-puzzle-piece"></i> Quem Somos</a
+            >
           </li>
           <li class="nav-item dropdown">
             <a
@@ -46,17 +65,25 @@
               aria-haspopup="true"
               aria-expanded="false"
             >
-              Dropdown
+              <i class="fas fa-users"></i> Área de Acesso
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Ação</a>
-              <a class="dropdown-item" href="#">Outra ação</a>
+              <a class="dropdown-item" href="#"
+                ><i class="fas fa-user-graduate"></i> Seja um Aluno</a
+              >
+              <a class="dropdown-item" href="#"
+                ><i class="fas fa-chalkboard-teacher"></i> Seja um Mentor</a
+              >
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Algo mais aqui</a>
+              <a class="dropdown-item" href="#"
+                ><i class="fas fa-sign-in-alt"></i> Login</a
+              >
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled text-light" href="#">Desativado</a>
+            <a class="nav-link disabled text-light" href="#"
+              ><i class="fas fa-envelope-open-text"></i> Entre em Contato</a
+            >
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -73,24 +100,278 @@
       </div>
     </nav>
 
-    <div class="container">
-      <div class="row mt-5 d-flex justify-content-center">
-          <div class="col-md-1">
-              <div class="bg-danger">1 coluna</div>
-          </div>
-          <div class="col-md-1">
-              <div class="bg-warning">2 coluna</div>
-          </div>
-          <div class="col-md-1">
-              <div class="bg-dark">3 coluna</div>
-          </div>
-          <div class="col-md-1">
-              <div class="bg-info">4 coluna</div>
-          </div>
-          <div class="col-md-1">
-              <div class="bg-success">5 coluna</div>
-          </div>
+    <!--CARROSEL-->
+    <div
+      id="carouselExampleIndicators"
+      class="carousel slide"
+      data-ride="carousel"
+    >
+      <ol class="carousel-indicators">
+        <li
+          data-target="#carouselExampleIndicators"
+          data-slide-to="0"
+          class="active"
+        ></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            class="d-block w-100"
+            src="./assets/img/learning3.jpg"
+            alt="Primeiro Slide"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            class="d-block w-100"
+            src="./assets/img/learning2.jpg"
+            alt="Segundo Slide"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            class="d-block w-100"
+            src="./assets/img/learning5.jpg"
+            alt="Terceiro Slide"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            class="d-block w-100"
+            src="./assets/img/learning1.jpg"
+            alt="Quarto Slide"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            class="d-block w-100"
+            src="./assets/img/learning4.jpg"
+            alt="Quinto Slide"
+          />
+        </div>
       </div>
+      <a
+        class="carousel-control-prev"
+        href="#carouselExampleIndicators"
+        role="button"
+        data-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#carouselExampleIndicators"
+        role="button"
+        data-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Próximo</span>
+      </a>
+    </div>
+
+    <!--JUMBTRON-->
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">SEJA UM TRANSFORMADOR</h1>
+        <p class="lead">
+          Garantindo o acesso à educação promovendo oportunidades aos jovens do
+          aqui e agora!
+        </p>
+      </div>
+
+      <!--CARDS-->
+    </div>
+    <div class="container">
+      <div class="card-columns">
+        <div class="card">
+          <img
+            class="card-img-top"
+            src="./assets/img/comunicacao.png"
+            alt="Imagem de capa do card"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Aprenda Os Segredos Da Comunicação</h5>
+            <p class="card-text">
+              Se você trava na hora de se comunicar em público ou sente aquele
+              friozinho na barriga momentos antes de se apresentar, seja numa
+              entrevista de emprego ou para mostrar um projeto, descubra os
+              segredos dos grandes comunicadores...
+            </p>
+          </div>
+        </div>
+        <div class="card p-3">
+          <blockquote class="blockquote mb-0 card-body">
+            <p>Se você acha que educação é cara, experimente a ignorância.</p>
+            <footer class="blockquote-footer">
+              <small class="text-muted">
+                Derek Bok,
+                <cite title="Título da fonte"> Em o Pensador</cite>
+              </small>
+            </footer>
+          </blockquote>
+        </div>
+        <div class="card">
+          <img
+            class="card-img-top"
+            src="./assets/img/algoritmos.png"
+            alt="Imagem de capa do card"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Aprenda Lógica de Programação</h5>
+            <p class="card-text">
+              Parece desafiador, né? Fique tranquilo que os primeiros passos
+              serão dados juntos. Você aprenderá como funciona a lógica na
+              teória passando para a prática colocando a mão na massa.
+            </p>
+            <p class="card-text">
+              <small class="text-muted">Atualizados 3 minutos atrás</small>
+            </p>
+          </div>
+        </div>
+        <div class="card bg-primary text-white text-center p-3">
+          <blockquote class="blockquote mb-0">
+            <p class="text-center">
+              "Doe sua habilidade para transformar o mundo."
+            </p>
+            <footer class="blockquote-footer text-light">
+              <small>
+                <cite title="Título da fonte">Donate Skills Foundation</cite>
+              </small>
+            </footer>
+          </blockquote>
+        </div>
+        <div class="card text-center">
+          <div class="card-body">
+            <h5 class="card-title">Descomplicando o Inglês</h5>
+            <p class="card-text">
+              Já tentou de tudo e mesmo assim continua no
+              <i>the books on the table</i> ou no verbo <i> to be </i> e sonha
+              em falar inglês tranquilamente sem precisar ser fluente ou nativa?
+              Seja bem vindo ou bem vinda, você está no local certo...
+            </p>
+            <p class="card-text">
+              <small class="text-muted">Atualizados 3 minutos atrás</small>
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img" src="./assets/img/conhecimento.png" alt="Conhecimento" />
+        </div>
+        <div class="card p-3 text-right">
+          <blockquote class="blockquote mb-0">
+            <p>
+              Eduquem as crianças, para que não seja necessário punir os
+              adultos.
+            </p>
+            <footer class="blockquote-footer">
+              <small class="text-muted">
+                Pítagoras,
+                <cite title="Título da fonte">Pai do Conceito de Justiça</cite>
+              </small>
+            </footer>
+          </blockquote>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Raciocínio Lógico</h5>
+            <p class="card-text">
+              Quem nunca usou a regra de três para resolver problemas
+              matemáticos? E se eu te dissesse que existem outras formas de se
+              resolver problemas? Fique tranquilo que o intuito aqui é trabalhar
+              o raciocínio lógico...
+            </p>
+            <p class="card-text">
+              <small class="text-muted">Atualizados 3 minutos atrás</small>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--TExto e Video-->
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Aprenda O Que Quiser Sem Sair de Casa</h3>
+          <p>
+            Uma ferramenta muito poderosa nos dias de hoje, levando em
+            consideração ao "Novo-Normal", é a internet, onde é possível
+            encontrar diversos materiais de estudos para se aprender o que
+            quiser. Por meio de textos, imagens, livros, revistas, vídeos, etc.
+          </p>
+          <p>
+            É o principal aliado da comunicação entre professores e alunos, com
+            um custo mais barato e privilegiado, unir a escrita, a fala e a
+            imagem com rapidez, flexibilidade e interação, o que há pouco tempo
+            era praticamente impossível.
+          </p>
+          <p>
+            Ou uso da internet, é recomendado como forma de ampliar os
+            conhecimentos, faça da forma mais sábia que puder, podendo assim
+            desenvolver constantemente o aspecto cognitivo.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/luipyUSgMY4"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <!--FOOTER-->
+    <div class="container-fluid p-1 bg-dark text-white">
+      <footer>
+        <div class="row mb-3">
+          <div class="col-md-12 d-flex justify-content-center"></div>
+        </div>
+        <div class="container d-flex justify-content-center">
+          <a
+            href="https://www.instagram.com/leandromariotti/?hl=pt-br"
+            target="_blank"
+            class="p-3"
+          >
+            <img
+              class="tm-social"
+              src="./assets/img/instagram.png"
+              alt="instagram-@leandromariotti"
+            />
+          </a>
+
+          <a href="https://github.com/Mariotti7" target="_blank" class="p-3">
+            <img
+              class="tm-social"
+              src="./assets/img/github.png"
+              alt="github-Mariotti07"
+            />
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/leandromariotti/"
+            target="_blank"
+            class="p-3"
+          >
+            <img
+              class="tm-social"
+              src="./assets/img/linkedin-logo.png"
+              alt="linkedin-leandromariotti"
+            />
+          </a>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <p class="text-center">
+              Todos os direitos reservados para
+              <b>Donate Skills Foundation</b> &copy;
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
 
     <script
