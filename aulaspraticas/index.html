@@ -16,15 +16,7 @@
       integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
       crossorigin="anonymous"
     />
-    <style>
-      .tm-social {
-        width: 50px;
-        height: 50px;
-      }
-      p {
-        text-align: justify;
-      }
-    </style>
+    <link rel="stylesheet" href="./assets/CSS/style.css" />
   </head>
   <body>
     <!--NAVBAR-->
@@ -45,13 +37,13 @@
       <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link text-light" href="#"
+            <a class="nav-link text-light" href="./index.html"
               ><i class="fas fa-home"></i> Home
               <span class="sr-only">(página atual)</span></a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light" href="#"
+            <a class="nav-link text-light" href="#quemsomos"
               ><i class="fas fa-puzzle-piece"></i> Quem Somos</a
             >
           </li>
@@ -68,20 +60,20 @@
               <i class="fas fa-users"></i> Área de Acesso
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#"
+              <a class="dropdown-item" href="#login"
                 ><i class="fas fa-user-graduate"></i> Seja um Aluno</a
               >
-              <a class="dropdown-item" href="#"
+              <a class="dropdown-item" href="#login"
                 ><i class="fas fa-chalkboard-teacher"></i> Seja um Mentor</a
               >
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#"
+              <a class="dropdown-item" href="#login"
                 ><i class="fas fa-sign-in-alt"></i> Login</a
               >
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled text-light" href="#"
+            <a class="nav-link disabled text-light" href="#contato"
               ><i class="fas fa-envelope-open-text"></i> Entre em Contato</a
             >
           </li>
@@ -99,7 +91,6 @@
         </form>
       </div>
     </nav>
-
     <!--CARROSEL-->
     <div
       id="carouselExampleIndicators"
@@ -258,7 +249,11 @@
           </div>
         </div>
         <div class="card">
-          <img class="card-img" src="./assets/img/conhecimento.png" alt="Conhecimento" />
+          <img
+            class="card-img"
+            src="./assets/img/conhecimento.png"
+            alt="Conhecimento"
+          />
         </div>
         <div class="card p-3 text-right">
           <blockquote class="blockquote mb-0">
@@ -323,10 +318,110 @@
         </div>
       </div>
     </div>
+    <br />
+    <!--Quem somos nos-->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h3 id="quemsomos">Quem Somos</h3>
+          <p>
+            Uma comunidade brasileira de aprendizagem online para pessoas que
+            desejam aprender com vídeos educacionais.
+          </p>
+          <p>
+            Garantindo o acesso à educação inclusiva, de qualidade e equitativa,
+            promovendo oportunidades de aprendizagem ao longo da vida para
+            todos.
+          </p>
+          <p>
+            Aulas gratuitas 100% online para aqueles que não possuem condições,
+            contando com ajuda e suporte de colaboradores por meio de doações.
+          </p>
+          <p>
+            Nossa maior motivação é aumentar substancialmente o número de jovens
+            e adultos que tenham habilidades relevantes, inclusive competências
+            técnicas e profissionais, para emprego, trabalho decente e
+            empreendedorismo.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <img src="./assets/img/quemsomos.jpg" alt="Quem Somos?" />
+        </div>
+      </div>
+    </div>
+    <br />
+    <hr>
+    <!--Area de Acesso-->
+    <div class="container" id="b-sg">
+      <div class="row">
+        <div class="col-md-6 text-center" style="left: 305px;">
+          <h3 id="login">Área de Acesso</h3>
+          <form class="form-signin">
+            <img class="mb-4" src="./assets/img/logo3.png" style="border-radius: 10px; box-shadow: 5px 10px #888888;" alt width="72" height="72" />
+            <h1 class="h3 mb-3 font-weight-normal">Faça Login</h1>
+            <label for="inputEmail" class="sr-only">Usuário Email</label>
+            <input
+              type="email"
+              id="inputEmail"
+              class="form-control"
+              placeholder="Usuário Email"
+              required
+              autofocus
+            />
+            <label for="inputPassword" class="sr-only">Senha</label>
+            <input
+              type="password"
+              id="inputPassword"
+              class="form-control"
+              placeholder="Senha"
+              required
+            />
+            <div class="checkbox mb-3">
+              <label>
+                <input type="checkbox" value="lembrar" />
+                "Lembrar"
+                <div class="txt-erro"></div>
+              </label>
+            </div>
+            <a href="">Ainda não é um membro? Cadastre-se</a> <i class="fa fa-unlock" aria-hidden="true"></i>
+            <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="entrar()">
+              Entrar
+            </button>
+            <p class="mt-5 mb-3 text-muted text-center">© 2020-2021</p>
+          </form>
+        </div>
+      </div>
+    </div>
+    <br>
+    <hr>
+    <!--AREA DE CONTATO-->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h3 id="contato">Entre Em Contato</h3>
+          <form>
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Digite Seu Nome</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nome" onkeyup="validaNome()">
+            </div>
+              <label for="exampleFormControlInput1">Digite Seu Email</label>
+              <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="nome@exemplo.com" onkeyup="validaEmail()">
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1"></label>
+              <textarea class="form-control" name="exampleFormControlTextarea1" id="exampleFormControlTextarea1" rows="10" style="width: 300px" placeholder="Digite Sua Mensagem" onkeyup="validaAssunto()"></textarea>
+              <br>
+              <div class="txt-error"></div>
+              <button type="button" class="btn btn-primary btn-lg" id="botao" onclick="enviar()">Enviar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
     <hr />
     <!--FOOTER-->
     <div class="container-fluid p-1 bg-dark text-white">
-      <footer>
+      <footer class="footer">
         <div class="row mb-3">
           <div class="col-md-12 d-flex justify-content-center"></div>
         </div>
@@ -343,11 +438,11 @@
             />
           </a>
 
-          <a href="https://github.com/Mariotti7" target="_blank" class="p-3">
+          <a href="#" class="p-3">
             <img
               class="tm-social"
-              src="./assets/img/github.png"
-              alt="github-Mariotti07"
+              src="./assets/img/home.png"
+              alt="Home Page"
             />
           </a>
 
@@ -362,6 +457,16 @@
               alt="linkedin-leandromariotti"
             />
           </a>
+          <a
+          href="#contato"
+          class="p-3"
+        >
+          <img
+            class="tm-social"
+            src="./assets/img/envelope.png"
+            alt="Email"
+          />
+        </a>
         </div>
         <div class="row">
           <div class="col-md-12">
@@ -389,5 +494,7 @@
       integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
       crossorigin="anonymous"
     ></script>
+
+    <script src="./assets/JS/script.js"></script>
   </body>
 </html>
